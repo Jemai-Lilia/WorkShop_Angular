@@ -1,0 +1,46 @@
+ <!----Interpolation------>
+ <p [style]="Style">My name is {{profile.Firstname}} {{profile.lastName}}. </p>
+ <p [style]="Style">I'm {{profile.age}} years old.</p>
+ <!----Event Binding------>
+ <button (click)="show()">Show </button>
+ <button (click)="hidden()">Hidden</button>
+ <!---Proprety Binding--->
+ <p [style]="Style">I'm from {{profile.country}}</p>
+
+ <a [href]="profile.GitHub">GitHub</a>
+
+
+<img [src]="LinkImage">
+<!----Event Binding------>
+<h1>{{Number}}</h1>
+<button (click)="inc()">incruement</button>
+<button (click)="dec()">decrement</button>
+
+<!----Two-way-Binding------>
+<p [style]="Style">My name is {{profile.Firstname}} {{profile.lastName}}. </p>
+<input type="text" [(ngModel)]="profile.Firstname">
+<input type="text" [(ngModel)]="profile.lastName">
+
+
+<!----Directive *ngIf-->
+<p *ngIf="verif">WorkShop Angular</p>
+
+<!----Directive *ngFor-->
+<div *ngFor="let item of dataArray; index as i ">
+  <p>{{i+1}} {{item}}</p>
+
+</div>
+
+<!----Directive *ngSwitch-->
+<input type="number" [(ngModel)]="nbr">
+<div [ngSwitch]="nbr">
+  <p *ngSwitchCase="1">First</p>
+  <p *ngSwitchCase="2">Second</p>
+  <p *ngSwitchCase="3">Third</p>
+</div>
+
+<!----Directive *ngClass-->
+<p [ngClass]="titleClass"> 4éme Twin 7</p>
+
+<!----Directive *ngStyle-->
+<p [ngStyle]="{'color':style1,'font-size':style2, 'text-decoration':style3}"> Welcome to Esprit</p>
